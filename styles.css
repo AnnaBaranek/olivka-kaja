@@ -1,0 +1,80 @@
+
+/* intuitivni box-sizing */
+html {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    font-family: Homemade Apple;
+    font-size: 1.5rem;
+}
+
+.galerie {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+   
+}
+
+.galerie__title {
+    justify-content: center;
+}
+  
+.obrazek {
+    width: calc(100% / 3);
+    
+}
+
+.spodni {
+    margin-top: 30px;
+}
+
+.obrazek {
+  flex: 0 0 calc(33.33% - 20px); /* Nastaví šířku obrázku na třetinu rodičovského prvku s mezerou 20px mezi obrázky */
+  margin: 10px; /* Vytvoří mezery mezi obrázky */
+  box-sizing: border-box; /* Zajistí, aby mezery byly zahrnuty ve výpočtu celkové šířky obrázku */
+}
+
+.obrazek {
+    flex: 0 0 calc(33.33% - 20px); /* Nastaví šířku obrázku na třetinu rodičovského prvku s mezerou 20px mezi obrázky */
+    margin: 10px; /* Vytvoří mezery mezi obrázky */
+    box-sizing: border-box; /* Zajistí, aby mezery byly zahrnuty ve výpočtu celkové šířky obrázku */
+  }
+  
+  @media (max-width: 768px) {
+    .obrazek {
+      flex-basis: 100%; /* Na menších obrazovkách nastaví šířku obrázků na 100 %, aby se poskladaly pod sebe */
+    }
+  }
+
+
+@media (max-width: 768px) {
+  .obrazek {
+    flex-basis: 100%; /* Na menších obrazovkách nastaví šířku obrázků na 100 %, aby se poskladaly pod sebe */
+  }
+}
+
+.bambulacek {
+
+    position: relative; /* Nutné pro absolutní pozicionování poté, co bude obrázek zvětšen */
+  }
+  
+  .bambulacek__obrazek {
+    background-image: url('images/5.jpg');
+    background-size: cover; 
+    transition: background-image 0.3s ease;
+  }
+  
+  .bambulacek:hover ..bambulacek__obrazek {
+    background-image: url('images/5.1.jpg'); /* Nový obrázek po najetí myši */
+  }
